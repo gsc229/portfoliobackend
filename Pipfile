@@ -9,6 +9,8 @@ pylint = "*"
 [packages]
 django = "*"
 psycopg2 = "*"
+pillow = "*"
+django-multiselectfield = "*"
 
 [requires]
 python_version = "3.8"

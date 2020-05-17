@@ -53,7 +53,7 @@ class Project(models.Model):
     
   technologies = MultiSelectField(choices=TECH_CHOICES)
   created_at = models.DateTimeField(default=datetime.now, blank=True)
-  
+
   def __str__(self):
     return f"title: {self.title} created: {self.created_at}"
 

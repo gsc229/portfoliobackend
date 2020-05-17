@@ -16,6 +16,7 @@ class Project(models.Model):
   )
   project_type = models.CharField(choices=TYPE_CHOICES, max_length=100, default='None')
   top_photo = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
+  
   front_end_repo = models.CharField(max_length=500, unique=True, blank=True)
   back_end_repo = models.CharField(max_length=500, unique=True, blank=True)
   description = models.TextField(blank=True)
@@ -53,7 +54,7 @@ class Project(models.Model):
     
   technologies = MultiSelectField(choices=TECH_CHOICES)
   created_at = models.DateTimeField(default=datetime.now, blank=True)
-  
+
   def __str__(self):
     return f"title: {self.title} created: {self.created_at}"
 

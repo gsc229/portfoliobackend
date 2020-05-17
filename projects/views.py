@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import Project
+from projects.models import Project
 from django.core import serializers
 import json
 
@@ -9,5 +9,7 @@ def projects(request):
  
   print(f"PROJECTS")  
   all_projects =  list(Project.objects.values()) 
-   
-  return JsonResponse({"data": all_projects}, safe=False)
+  
+  print(Project.objects.all()[0].top_photo.url)
+
+  return JsonResponse({"data": all_projects }, safe=False)

@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from django.http import JsonResponse
 from projects.models import Project
 from django.core import serializers
+from django.conf import settings
 import json
 
 # Create your views here.
@@ -9,7 +10,15 @@ def projects(request):
  
   print(f"PROJECTS")  
   all_projects =  list(Project.objects.values()) 
+  projects = Project.objects.all()
   
-  print(Project.objects.all()[0].top_photo.url)
+  for project in all_projects:
+    project['top_photo'] = settings.MEDIA_URL + project['top_photo']
+  
+  print(all_projects)
+  context = {
+    'projects': all_projects
+  }
 
-  return JsonResponse({"data": all_projects }, safe=False)
+  return render(request, 'projects/projects.html', context)
+  #return JsonResponse({"data": all_projects }, safe=False)

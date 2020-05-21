@@ -7,14 +7,17 @@ from pygments.lexers import get_all_lexers, get_lexer_by_name
 LEXERS = [item for item in get_all_lexers() if item[1]]
 LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS ])
 
-class ProjectSerializer(serializers.ModelSerializer):
+class ProjectSerializer(serializers.HyperlinkedModelSerializer):
 
     technologies = serializers.MultipleChoiceField(choices=LANGUAGE_CHOICES)
-    
+    owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Project
         fields = [
-                'title', 
+                'id',
+                'url',
+                'title',                
+                'owner',
                 'project_type', 
                 'top_photo', 
                 'front_end_repo', 
@@ -39,4 +42,5 @@ class ProjectSerializer(serializers.ModelSerializer):
         instance.responsibilities = validated_data.get('responsibilities', instance.responsibilities)        
         instance.technologies = validated_data.get('technologies', instance.technologies)
         instance.created_at = validated_data.get('created_at', instance.created_at)
-
+        instance.save()
+        return instance

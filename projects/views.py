@@ -1,10 +1,4 @@
-from django.shortcuts import render, HttpResponse
-from django.http import JsonResponse
-from django.core import serializers
-from django.conf import settings
-import json
-# Create your views here.
-from rest_framework import generics, renderers
+from rest_framework import generics, renderers, permissions
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -22,6 +16,7 @@ def api_root(request, format=None):
     
   })
 
+""" GET all, POST """
 class ProjectList(generics.ListCreateAPIView):
   queryset = Project.objects.all()
   serializer_class = ProjectSerializer
@@ -29,9 +24,11 @@ class ProjectList(generics.ListCreateAPIView):
   def perform_create(self, serializer):
     serializer.save(owner=self.request.user)
 
-
-
-
+""" GET single, PUT, DELTE """
+class ProjectDetail(generics.RetrieveUpdateDestroyAPIView):
+  queryset = Project.objects.all()
+  serializer_class = ProjectSerializer
+  permission_classes  = [permissions.IsAuthenticatedOrReadOnly]
 
 
 

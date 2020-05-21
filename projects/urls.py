@@ -7,6 +7,7 @@ from projects import views
 urlpatterns = [    
     path('', views.api_root),
     path('projects/', views.ProjectList.as_view(), name='project-list'),
+    path('projects/<int:pk>/', views.ProjectDetail.as_view(), name='project-detail')
     #path('media', views.media, name='media')
 ]
 

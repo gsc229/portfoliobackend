@@ -1,9 +1,15 @@
 from rest_framework import serializers
+from rest_framework.fields import MultipleChoiceField
 from projects.models import Project
 from django.contrib.auth.models import User
-
+from projects.tech_choices import TECH_CHOICES, TYPE_CHOICES
+from pygments.lexers import get_all_lexers, get_lexer_by_name
+LEXERS = [item for item in get_all_lexers() if item[1]]
+LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS ])
 
 class ProjectSerializer(serializers.ModelSerializer):
+
+    technologies = serializers.MultipleChoiceField(choices=LANGUAGE_CHOICES)
 
     class Meta:
         model = Project
@@ -33,4 +39,4 @@ class ProjectSerializer(serializers.ModelSerializer):
         instance.responsibilities = validated_data.get('responsibilities', instance.responsibilities)        
         instance.technologies = validated_data.get('technologies', instance.technologies)
         instance.created_at = validated_data.get('created_at', instance.created_at)
-            
+

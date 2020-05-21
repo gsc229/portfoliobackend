@@ -19,7 +19,7 @@ class Project(models.Model):
   description = models.TextField(blank=True)
   roles = models.TextField(blank=True)
   responsibilities = models.TextField(blank=True)
-  technologies = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
+  technologies = MultipleChoiceField(choices=LANGUAGE_CHOICES)
   created_at = models.DateTimeField(default=datetime.now, blank=True)
 
   def __str__(self):

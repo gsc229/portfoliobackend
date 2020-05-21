@@ -11,6 +11,10 @@ django = "*"
 psycopg2 = "*"
 pillow = "*"
 django-multiselectfield = "*"
+django-cors-headers = "*"
+djangorestframework = "*"
+pygments = "*"
+httpie = "*"
 
 [requires]
 python_version = "3.8"

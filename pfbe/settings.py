@@ -25,13 +25,14 @@ SECRET_KEY = 'dvb^dq7$uw+97q(k+)$ttx!t%2ngwv74)6t^b&17h34usm&twe'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','http://localhost:3000','http://127.0.0.1:3000']
 
 
 # Application definition
 INSTALLED_APPS = [
     'projects.apps.ProjectsConfig',
     'multiselectfield',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -48,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'pfbe.urls'
@@ -119,6 +124,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# CORS stuff 
+CORS_ORIGIN_ALLOW_ALL=True
+
 
 
 # Static files (CSS, JavaScript, Images)

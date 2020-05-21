@@ -10,7 +10,7 @@ LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS ])
 class ProjectSerializer(serializers.ModelSerializer):
 
     technologies = serializers.MultipleChoiceField(choices=LANGUAGE_CHOICES)
-
+    
     class Meta:
         model = Project
         fields = [

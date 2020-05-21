@@ -1,3 +1,4 @@
 {
-  "python.pythonPath": "C:\\Users\\gsc22\\.virtualenvs\\ProfileBackend-S1bANYP1\\Scripts\\python.exe"
+  "python.pythonPath": "C:\\Users\\gsc22\\.virtualenvs\\portfoliobackend-lnan_Z1S\\Scripts\\python.exe",
+  "python.linting.pylintArgs": ["--load-plugins=pylint_django"]
 }

@@ -9,7 +9,7 @@ LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS ])
 
 class ProjectSerializer(serializers.HyperlinkedModelSerializer):
 
-    technologies = serializers.MultipleChoiceField(choices=LANGUAGE_CHOICES)
+    technologies = serializers.MultipleChoiceField(choices=TECH_CHOICES)
     owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Project
@@ -21,11 +21,13 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
                 'project_type', 
                 'top_photo', 
                 'front_end_repo', 
-                'back_end_repo', 
+                'back_end_repo',
+                'website', 
                 'description', 
                 'roles', 
                 'responsibilities',
-                'technologies', 
+                'technologies',
+                'featured', 
                 'created_at'
                 ]
     
@@ -37,10 +39,12 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
         instance.top_photo = validated_data.get('top_photo', instance.top_photo)
         instance.front_end_repo = validated_data.get('front_end_repo', instance.front_end_repo)
         instance.back_end_repo = validated_data.get('back_end_repo', instance.back_end_repo)
+        instance.website = validated_data.get('website', instance.website)
         instance.description = validated_data.get('description', instance.description)
         instance.roles = validated_data.get('roles', instance.roles) 
         instance.responsibilities = validated_data.get('responsibilities', instance.responsibilities)        
         instance.technologies = validated_data.get('technologies', instance.technologies)
+        instance.featured = validated_data.get('featured', instance.featured)
         instance.created_at = validated_data.get('created_at', instance.created_at)
         instance.save()
         return instance

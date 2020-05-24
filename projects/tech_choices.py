@@ -1,5 +1,6 @@
 TYPE_CHOICES = (
     ('Course Project', 'Course Project'),
+    ('Team Project', 'Team Project'),
     ('Major Project', 'Major Project'),    
     ('Week Project', 'Week Project'),
     ('Personal Day Project', 'Personal Day Project'),
@@ -26,7 +27,8 @@ TECH_CHOICES = (
     ('Jinja','Jinja'),    
     ('Styled Components','Styled Components'),
     ('CSS 3','CSS 3'),    
-    ('Material UI','Material UI'),        
+    ('Material UI','Material UI'),
+    ('Semantic UI', 'Semantic UI'),        
     ('Materialize','Materialize'),
     ('Sass','Sass'),
     ('Less','Less'),    

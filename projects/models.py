@@ -17,12 +17,18 @@ class Project(models.Model):
   project_type = models.CharField(choices=TYPE_CHOICES, max_length=100, default='None')
   top_photo = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
   front_end_repo = models.CharField(max_length=500, unique=True, blank=True)
+  fe_fa_icon = models.CharField(max_length=100, blank=True) 
   back_end_repo = models.CharField(max_length=500, unique=True, blank=True)
+  be_fa_icon = models.CharField(max_length=100, blank=True)
+  website = models.CharField(max_length=500, unique=True, blank=True)
   description = models.TextField(blank=True)
-  roles = models.TextField(blank=True)
-  responsibilities = models.TextField(blank=True)  
+  roles = models.TextField(blank=True)  
+  responsibilities = models.TextField(blank=True)
+  technologies = MultiSelectField(choices=TECH_CHOICES, default='None')
+  featured = models.BooleanField(default=False)  
   created_at = models.DateTimeField(default=datetime.now, blank=True)
-  technologies = MultiSelectField(choices=LANGUAGE_CHOICES, default='None')
+  
+
 
   def __str__(self):
     return f"title: {self.title} created: {self.created_at}"

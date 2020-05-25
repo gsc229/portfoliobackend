@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -86,10 +87,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'projects',
         'USER': 'postgres',
-        'PASSWORD': '123456',
+        'PASSWORD': os.getenv('PG_PW'),
         'HOST': 'localhost'
     }
 }
+
 
 
 # Password validation

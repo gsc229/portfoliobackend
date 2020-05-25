@@ -34,6 +34,7 @@ TECH_CHOICES = (
     ('Less','Less'),    
     ('HTML 5','HTML 5'),    
     ('Axios','Axios'),
+    ('Cloudinary', 'Cloudinary'),
     ('None','None')
   )
 

@@ -26,7 +26,7 @@ class Project(models.Model):
   technologies = MultiSelectField(choices=TECH_CHOICES, default='None')
   featured = models.BooleanField(default=False)  
   created_at = models.DateTimeField(default=datetime.now, blank=True)
-  
+   
 
 
   def __str__(self):

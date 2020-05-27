@@ -16,6 +16,7 @@ djangorestframework = "*"
 pygments = "*"
 httpie = "*"
 python-dotenv = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"

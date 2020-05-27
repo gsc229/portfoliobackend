@@ -17,6 +17,7 @@ pygments = "*"
 httpie = "*"
 python-dotenv = "*"
 gunicorn = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.8"

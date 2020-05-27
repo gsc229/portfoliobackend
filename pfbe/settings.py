@@ -161,5 +161,4 @@ DEFAULT_FILE_STORAGE = os.getenv('DEFAULT_FILE_STORAGE')
 STATICFILES_STORAGE= os.getenv('STATICFILES_STORAGE')
 
 
-
 django_heroku.settings(locals())

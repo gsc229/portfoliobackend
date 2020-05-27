@@ -1,11 +1,10 @@
 [
   {
-      "id": 4,
-      "url": "http://localhost:8000/projects/4/",
+      
       "title": "Expat Journal",
       "owner": "greg",
       "project_type": "Team Project",
-      "top_photo": "http://localhost:8000/media/photos/2020/05/24/expat_journal.jpg",
+      
       "front_end_repo": "https://github.com/ExpatJournal/Marketing-Page-Greg-Cameron",
       "back_end_repo": "",
       "website": "https://expatjournal-marketing-pages.netlify.app/index.html",
@@ -18,16 +17,15 @@
           "Bootstrap",
           "CSS 3"
       ],
-      "featured": false,
-      "created_at": "2020-05-24T18:32:27.436850Z"
+      "featured": false
+      
   },
   {
-      "id": 1,
-      "url": "http://localhost:8000/projects/1/",
+      
       "title": "Market Ave.",
       "owner": "greg",
       "project_type": "Team Project",
-      "top_photo": "http://localhost:8000/media/photos/2020/05/24/market_ave_3.jpg",
+      
       "front_end_repo": "https://github.com/gsc229/quick-street-fe",
       "back_end_repo": "https://github.com/gsc229/quick-street-be#contents",
       "website": "https://market-ave.netlify.app/",
@@ -46,16 +44,15 @@
           "Express",
           "Node"
       ],
-      "featured": false,
-      "created_at": "2020-05-24T18:21:52.462393Z"
+      "featured": false
+      
   },
   {
-      "id": 2,
-      "url": "http://localhost:8000/projects/2/",
+      
       "title": "BT Real Estate",
       "owner": "greg",
       "project_type": "Course Project",
-      "top_photo": "http://localhost:8000/media/photos/2020/05/24/bt_real_estate.jpg",
+      
       "front_end_repo": "https://github.com/gsc229/btre_project",
       "back_end_repo": "",
       "website": "https://greg-btrealestate.herokuapp.com/",
@@ -73,16 +70,15 @@
           "Bootstrap",
           "Digital Ocean"
       ],
-      "featured": false,
-      "created_at": "2020-05-24T18:25:48.125740Z"
+      "featured": false
+     
   },
   {
-      "id": 5,
-      "url": "http://localhost:8000/projects/5/",
+      
       "title": "Wanderlust",
       "owner": "greg",
       "project_type": "Team Project",
-      "top_photo": "http://localhost:8000/media/photos/2020/05/24/wander_lust.jpg",
+      
       "front_end_repo": "https://github.com/Wanderlust-build-week-project/Front-End/blob/master/src/components/CreatorLandingPage.js",
       "back_end_repo": "",
       "website": "https://epic-minsky-812a3d.netlify.app/index.html",
@@ -95,16 +91,15 @@
           "React with hooks",
           "React Router"
       ],
-      "featured": false,
-      "created_at": "2020-05-24T18:36:30.832602Z"
+      "featured": false
+      
   },
   {
-      "id": 6,
-      "url": "http://localhost:8000/projects/6/",
+      
       "title": "Six Degrees of GitHub",
       "owner": "greg",
       "project_type": "Personal Day Project",
-      "top_photo": "http://localhost:8000/media/photos/2020/05/24/six_degrees_of_github.jpg",
+      
       "front_end_repo": "https://github.com/gsc229/React-Github-User-Card/tree/greg-cameron",
       "back_end_repo": "",
       "website": "https://react-github-user-card.gsc229.now.sh/",
@@ -116,16 +111,15 @@
           "React with classes",
           "Axios"
       ],
-      "featured": false,
-      "created_at": "2020-05-24T18:38:18.290878Z"
+      "featured": false
+      
   },
   {
-      "id": 7,
-      "url": "http://localhost:8000/projects/7/",
+      
       "title": "NASA's Photo of The Day Viewer",
       "owner": "greg",
       "project_type": "Personal Day Project",
-      "top_photo": "http://localhost:8000/media/photos/2020/05/24/nasa_pod_1.jpg",
+      
       "front_end_repo": "https://github.com/gsc229/nasa-photo-of-the-day/tree/greg-cameron",
       "back_end_repo": "",
       "website": "https://gregs-nasa-apod.netlify.app/",
@@ -138,7 +132,7 @@
           "Axios",
           "React with hooks"
       ],
-      "featured": false,
-      "created_at": "2020-05-24T18:44:13.148680Z"
+      "featured": false
+      
   }
 ] 

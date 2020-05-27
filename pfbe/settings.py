@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'dvb^dq7$uw+97q(k+)$ttx!t%2ngwv74)6t^b&17h34usm&twe'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['localhost','http://localhost:3000','http://127.0.0.1:3000', 'https://projectsdata.herokuapp.com/', 'projectsdata.herokuapp.com']
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -130,7 +131,10 @@ USE_TZ = True
 
 # CORS stuff 
 CORS_ORIGIN_ALLOW_ALL=True
-
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',    
+}
 
 
 # Static files (CSS, JavaScript, Images)
@@ -144,5 +148,18 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# AWS S3 Bucket Config
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_S3_SIGNATURE_VERSION = os.getenv('AWS_S3_SIGNATURE_VERSION')
+AWS_DEFAULT_REGION = os.getenv('AWS_DEFAULT_REGION')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_FILE_OVERWRITE = os.getenv('AWS_S3_FILE_OVERWRITE')
+AWS_DEFAULT_ACL = os.getenv('AWS_DEFAULT_ACL')
+DEFAULT_FILE_STORAGE = os.getenv('DEFAULT_FILE_STORAGE')
+STATICFILES_STORAGE= os.getenv('STATICFILES_STORAGE')
+
+
 
 django_heroku.settings(locals())

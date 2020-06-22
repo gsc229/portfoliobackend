@@ -20,7 +20,7 @@ def api_root(request, format=None):
 class ProjectList(generics.ListCreateAPIView):
   queryset = Project.objects.all()
   serializer_class = ProjectSerializer
-
+  permission_classes  = [permissions.IsAuthenticatedOrReadOnly]
   def perform_create(self, serializer):
     serializer.save(owner=self.request.user)
 

@@ -4,4 +4,9 @@ Pipfile.lock
 db.sqlite3
 Pipfile.lock
 media
+<<<<<<< HEAD
 .env
+=======
+.env
+pfbe/.env
+>>>>>>> cc7d32cf1cb716a63bdcaaaaef91ad285add233d

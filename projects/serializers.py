@@ -22,7 +22,8 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
                 'top_photo', 
                 'front_end_repo', 
                 'back_end_repo',
-                'website', 
+                'website',
+                'web_icon', 
                 'description', 
                 'roles', 
                 'responsibilities',
@@ -39,6 +40,7 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
         instance.top_photo = validated_data.get('top_photo', instance.top_photo)
         instance.front_end_repo = validated_data.get('front_end_repo', instance.front_end_repo)
         instance.back_end_repo = validated_data.get('back_end_repo', instance.back_end_repo)
+        instance.web_icon = validated_data.get('web_icon', instance.web_icon)
         instance.website = validated_data.get('website', instance.website)
         instance.description = validated_data.get('description', instance.description)
         instance.roles = validated_data.get('roles', instance.roles) 

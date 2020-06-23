@@ -7,8 +7,6 @@ verify_ssl = true
 pylint = "*"
 
 [packages]
-django = "*"
-psycopg2 = "*"
 pillow = "*"
 django-multiselectfield = "*"
 django-cors-headers = "*"
@@ -21,6 +19,8 @@ django-heroku = "*"
 whitenoise = "*"
 django-storages = "*"
 boto3 = "*"
+django = "==3.0.6"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"

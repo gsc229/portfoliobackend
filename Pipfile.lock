@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "74e6569be01a93cc2d697c72870227dfe6c31b90ec24948d847d586ccadc6332"
+            "sha256": "96067c49ba8288d7b49ed38e3842866c59f9d7d64f07d9c4b057bea9dc178515"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -25,6 +25,7 @@
         },
         "boto3": {
             "hashes": [
+<<<<<<< HEAD
                 "sha256:5130fd17787637e818e7be8b2820e88a5aa441e13335a99b7442f9aead4e3402"
             ],
             "index": "pypi",
@@ -36,6 +37,20 @@
                 "sha256:b91ce293e3bb1c2cb8c191ec544b80ce8193d0503185fadeae2d429f896c1934"
             ],
             "version": "==1.17.8"
+=======
+                "sha256:4856c8cb4150b900cc7dccbdf16f542fb8c12e97b17639979e58760847f7cf35",
+                "sha256:fe6f7f58fa53c4dd86432315717c989a65a5a8748e6219a53725be1041c4a113"
+            ],
+            "index": "pypi",
+            "version": "==1.14.7"
+        },
+        "botocore": {
+            "hashes": [
+                "sha256:cce790e65368d28dfd715558daea6890922716efa69d3a4c76d80348a71ad460",
+                "sha256:e582e3ba61d812e8dd0939c0455c6f68cf41587506a3a30deafc54825087de01"
+            ],
+            "version": "==1.17.7"
+>>>>>>> 6d2626c... updated to django 3.0.7
         },
         "certifi": {
             "hashes": [
@@ -68,11 +83,11 @@
         },
         "django": {
             "hashes": [
-                "sha256:051ba55d42daa3eeda3944a8e4df2bc96d4c62f94316dea217248a22563c3621",
-                "sha256:9aaa6a09678e1b8f0d98a948c56482eac3e3dd2ddbfb8de70a868135ef3b5e01"
+                "sha256:5052b34b34b3425233c682e0e11d658fd6efd587d11335a0203d827224ada8f2",
+                "sha256:e1630333248c9b3d4e38f02093a26f1e07b271ca896d73097457996e0fae12e8"
             ],
             "index": "pypi",
-            "version": "==3.0.6"
+            "version": "==3.0.7"
         },
         "django-cors-headers": {
             "hashes": [

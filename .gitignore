@@ -5,8 +5,8 @@ db.sqlite3
 Pipfile.lock
 media
 .env
-<<<<<<< HEAD
 staticfiles
-=======
-staticfiles
->>>>>>> 21e46184c4ee060073ca00020c1fae04347f9ee4
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

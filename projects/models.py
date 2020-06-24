@@ -6,10 +6,11 @@ from django.contrib.postgres.fields import ArrayField
 from projects.tech_choices import TECH_CHOICES, TYPE_CHOICES
 from pygments.lexers import get_all_lexers, get_lexer_by_name
 # Create your models here.
+from django.contrib.auth.models import User
+
 
 LEXERS = [item for item in get_all_lexers() if item[1]]
 LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS ])
-
 
 class Project(models.Model):
   owner = models.ForeignKey('auth.User', related_name='projects', on_delete=models.CASCADE)

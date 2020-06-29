@@ -18,7 +18,6 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -27,6 +26,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG') == 'True'
+
 
 ALLOWED_HOSTS = ['localhost','http://localhost:3000','http://127.0.0.1:3000', 'https://projectsdata.herokuapp.com/', 'projectsdata.herokuapp.com']
 

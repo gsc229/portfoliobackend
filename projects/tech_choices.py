@@ -3,7 +3,7 @@ TYPE_CHOICES = (
     ('Team Project', 'Team Project'),
     ('Major Project', 'Major Project'),    
     ('Week Project', 'Week Project'),
-    ('Personal Day Project', 'Personal Day Project'),
+    ('Personal Project', 'Personal Project'),
     ('None', 'None')
   )
 
@@ -14,7 +14,8 @@ TECH_CHOICES = (
     ('React with classes','React with classes'),       
     ('React Router','React Router'),
     ('Redux','Redux'),        
-    ('JavaScript','JavaScript'),   
+    ('JavaScript','JavaScript'),
+    ('TypeScript', 'TypeScript'),
     ('Node','Node'),      
     ('Express','Express'),    
     ('MongoDB','MongoDB'),       

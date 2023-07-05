@@ -6,7 +6,7 @@ charset-normalizer==3.1.0
 colorama==0.4.6
 defusedxml==0.7.1
 dj-database-url==2.0.0
-Django==4.2.1
+Django==4.2.3
 django-cors-headers==4.0.0
 django-heroku==0.3.1
 django-multiselectfield==0.1.12
